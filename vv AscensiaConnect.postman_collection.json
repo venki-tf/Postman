@@ -1,0 +1,513 @@
+{
+	"info": {
+		"_postman_id": "a0dfab48-e219-48ec-9274-9db6cb3a5789",
+		"name": "vv AscensiaConnect",
+		"description": "AscensiaConnect ",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Whisk VerifyClientToken",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\"FJnBxtmuF7EmgkXZid7D7pC0iKsK0avFHkEaujvOHnbwnU9YkOF8rYUw5MQTn/qdNwdIuy5QFIGOBNPtkl6dsB+rfwE5n1GaoRXxkWLgKSu4ERuT9KnH3rd062b9grcyFb9SlCxf0yfZv0jyRYTP9qs+qAEVYkByFtYWRskjQfC7JtqeXxk03Gx+KSaLVBSgvALQ2uB4h2BHA47nT8MlVBa+f6Zh6xwb92AT6KMQXudvf0bHZ3U8jEB03Q83PHuk/W2H4W6dkeEkeSEXNW31/w==\""
+				},
+				"url": {
+					"raw": "http://localhost:60322/TokenValidation/VerifyClientToken",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "60322",
+					"path": [
+						"TokenValidation",
+						"VerifyClientToken"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetBGData Call for Authorization Code Grant (ClientId -3)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer -p-t6g3AWjxZreqQWD8euMFVWkKtYocKtcCewmvsn_PXJSpTuOQwQ0oX9iL9n6FU-QHXKXKcNXxt0NSqmD4upKRKB2S39xzlanLB9v3TvD-zqfHZpaJs9Hdv_BChyNuubXk2YdWaBTburAAiByrHzDbDz7M5BPZ1NSIxpLXB-AgSlkJk4P7o239TsALEBk2o2VvugK_CHv-lmc4Ntf55TuHGL6RKnVnMuYRACMcZu5Qch44fvUl6P0sg3ngjO6GjpIFx9F2rXuTOAn_jDztYhPTxI8KNAewVcR630Y6sdkVsAswyy_1d_PKWheK1NXuDCkQg-MQb123NYMNH-niGJtRqVUxpS0pT0OnLd3jIg6LLglmY"
+					},
+					{
+						"key": "client_id",
+						"value": "3"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Users\": [\n    {\n      \"UserKey\": \"eecd0b640ccf4d1f87bd19e93a74cfc6\",\n\t  \"StartDate\": \"2012-05-30\",\n      \"EndDate\": \"2018-12-25\",\n      \"StartId\": null,\n      \"EndId\": null\n    },\n\t{\n      \"UserKey\": \"12-34-56\",\n\t  \"StartDate\": \"2012-05-30\",\n      \"EndDate\": \"2018-12-25\",\n      \"StartId\": null,\n      \"EndId\": null\n    }\n  ],\n   \"TransactionID\": \"\"\n\n}"
+				},
+				"url": {
+					"raw": "http://localhost:51281/v1/GetBGRelatedData?Datasource=Contour&Countrycode=US",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51281",
+					"path": [
+						"v1",
+						"GetBGRelatedData"
+					],
+					"query": [
+						{
+							"key": "Datasource",
+							"value": "Contour"
+						},
+						{
+							"key": "Countrycode",
+							"value": "US"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetBGData Call for Client Credential Grant (ClientId -54321)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer -p-t6g3AWjxZreqQWD8euMFVWkKtYocKtcCewmvsn_PXJSpTuOQwQ0oX9iL9n6FU-QHXKXKcNXxt0NSqmD4upKRKB2S39xzlanLB9v3TvD-zqfHZpaJs9Hdv_BChyNuubXk2YdWaBTburAAiByrHzDbDz7M5BPZ1NSIxpLXB-AgSlkJk4P7o239TsALEBk2o2VvugK_CHv-lmc4Ntf55TuHGL6RKnVnMuYRACMcZu5Qch44fvUl6P0sg3ngjO6GjpIFx9F2rXuTOAn_jDztYhPTxI8KNAewVcR630Y6sdkVsAswyy_1d_PKWheK1NXuDCkQg-MQb123NYMNH-niGJtRqVUxpS0pT0OnLd3jIg6LLglmY"
+					},
+					{
+						"key": "client_id",
+						"value": "3"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Users\": [\n    {\n      \"UserKey\": \"eecd0b640ccf4d1f87bd19e93a74cfc6\",\n\t  \"StartDate\": \"2012-05-30\",\n      \"EndDate\": \"2018-12-25\",\n      \"StartId\": null,\n      \"EndId\": null\n    },\n\t{\n      \"UserKey\": \"12-34-56\",\n\t  \"StartDate\": \"2012-05-30\",\n      \"EndDate\": \"2018-12-25\",\n      \"StartId\": null,\n      \"EndId\": null\n    }\n  ],\n   \"TransactionID\": \"\"\n\n}"
+				},
+				"url": {
+					"raw": "http://localhost:51281/v1/GetBGRelatedData?Datasource=Contour&Countrycode=US",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51281",
+					"path": [
+						"v1",
+						"GetBGRelatedData"
+					],
+					"query": [
+						{
+							"key": "Datasource",
+							"value": "Contour"
+						},
+						{
+							"key": "Countrycode",
+							"value": "US"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Token for Authorization Code Grant Client",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "code",
+							"value": "129f84e414a3411d85adc4876d59ae05",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "authorization_code",
+							"type": "text"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "https://postman-echo.com/get",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "987654321",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://onyxtestcloud.com/ascensiaconnect/OAuth2/Token",
+					"protocol": "https",
+					"host": [
+						"onyxtestcloud",
+						"com"
+					],
+					"path": [
+						"ascensiaconnect",
+						"OAuth2",
+						"Token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Token for Credential Grant Client",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "client_id",
+							"value": "54321",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "123456789",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://onyxtestcloud.com/ascensiaconnect/OAuth2/Token",
+					"protocol": "https",
+					"host": [
+						"onyxtestcloud",
+						"com"
+					],
+					"path": [
+						"ascensiaconnect",
+						"OAuth2",
+						"Token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Revoke Token",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic MToxMjM0NTY3ODk="
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "token",
+							"value": "ISLTPhrLJICA6ad1ILCWiKjvbZUYpjEL9jWYlbv_WZXMXvN-Tq2f4I7FIXPlE7a4eiTpX_UheAUJ2XBPi-MmAlQGtBoDDqm3lPZrGx3Y2VHN95Px51w-YxpizYsh9cye1CdIzIcQntKUsUwC-KcIuENoNBP6dzfaSRcSmcv2Q2k8Gz7R53jWZ5lqYN0RPzxhTV8U0UMxZF1sdUFwnvM60B1-FmY9XGnEOh_jYJxIm4VPDhigo76oYqDWtWs4yCOqCmYEghn3mN812YGd-1_6Ff0kYZjk2bdZOH15Y4gZLft-bA-Nj79EYqYkJhxH8GItX0zxEXADWpR1NKgqLr_ewx9fr7LpbXemriu5Ef54aJZ0UJt0",
+							"type": "text"
+						},
+						{
+							"key": "token_type_hint",
+							"value": "access_token",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://onyxtestcloud.com/ascensiaconnect/OAuth2/Revoke",
+					"protocol": "https",
+					"host": [
+						"onyxtestcloud",
+						"com"
+					],
+					"path": [
+						"ascensiaconnect",
+						"OAuth2",
+						"Revoke"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Token for Credential Grant",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "client_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "123456789",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "refresh_token",
+							"type": "text"
+						},
+						{
+							"key": "refresh_token",
+							"value": "xUYoVowomlve8lk_ZoqPy-lwNhXnCw3PpsSzq1LGLkrmNOFRca5Qo1GYomiRvgLKXF-IWK8361M9J7OFtS2s3KBMjK8IZAZLVfuKB9J5tWfb4i15bpigjegPiiNU0d4yz0ESB8ojXMS0B9sqxa-iUCXCd8DVC2ueFuqsuEz1WzLL_rky_hmx-XUowoKS0Rv0ha-iy_N8jvrWbQsZtf3bEMU5t89ZVh20jwc32WA85RR8jYz6IW4hMMtbNqq0qHgfEwg3qMj8usUAdLoCyOv6ktc74YLLrujiSuyzuDp5AyWkzgfFTwgniWAm9dVJlNzz8OXZwSia3HToFkcocjh365XLn6YBWWQBIjREuzecVvbmAAie",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://onyxtestcloud.com/ascensiaconnect/OAuth2/Token",
+					"protocol": "https",
+					"host": [
+						"onyxtestcloud",
+						"com"
+					],
+					"path": [
+						"ascensiaconnect",
+						"OAuth2",
+						"Token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:59964/OAuth2/Authorize?client_id=3&redirect_uri=https://onyxtestcloud.com/OAuth2Client/Home/Callback&response_type=code&scope=Contour&language_code=EN&country_code=US",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://onyxtestcloud.com/ascensiaconnect/OAuth2/Authorize?client_id=3&redirect_uri=https://onyxtestcloud.com/OAuth2Client/Home/Callback&response_type=code&scope=Contour&language_code=EN&country_code=US",
+					"protocol": "https",
+					"host": [
+						"onyxtestcloud",
+						"com"
+					],
+					"path": [
+						"ascensiaconnect",
+						"OAuth2",
+						"Authorize"
+					],
+					"query": [
+						{
+							"key": "client_id",
+							"value": "3"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "https://onyxtestcloud.com/OAuth2Client/Home/Callback"
+						},
+						{
+							"key": "response_type",
+							"value": "code"
+						},
+						{
+							"key": "scope",
+							"value": "Contour"
+						},
+						{
+							"key": "language_code",
+							"value": "EN"
+						},
+						{
+							"key": "country_code",
+							"value": "US"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:60322/StoreCode/RecordExist",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\"aE7ryY5zvNlhrzf60PoLQ3pIXrWG9STP4l9R3PCav+tZ2uA+s1bkJ3PfxT8JFsGCUwkXFGWNIOyrKff/QjaNOIKt98KiApjndhiM1JAazxA7h/3R3QLtzItNsm1nuVBGF+labx9Vq7zdysuQfS0Gnw==\""
+				},
+				"url": {
+					"raw": "http://localhost:60322/StoreCode/RecordExist",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "60322",
+					"path": [
+						"StoreCode",
+						"RecordExist"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:59964/OAuth2/Authorize?client_id=3&language_code=EN&country_code=US&redirect_uri=https://onyxtestcloud.com/OAuth2Client/Home/Callback&response_type=code&scope=Contour",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:59964/OAuth2/Authorize?client_id=3&language_code=EN&country_code=US&redirect_uri=https://onyxtestcloud.com/OAuth2Client/Home/Callback&response_type=code&scope=Contour",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "59964",
+					"path": [
+						"OAuth2",
+						"Authorize"
+					],
+					"query": [
+						{
+							"key": "client_id",
+							"value": "3"
+						},
+						{
+							"key": "language_code",
+							"value": "EN"
+						},
+						{
+							"key": "country_code",
+							"value": "US"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "https://onyxtestcloud.com/OAuth2Client/Home/Callback"
+						},
+						{
+							"key": "response_type",
+							"value": "code"
+						},
+						{
+							"key": "scope",
+							"value": "Contour"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://onyxtestcloud.com/ascensiaconnect/OAuth2/Authorize?client_id=&redirect_uri=&response_type=&scope=&language_code=&country_code=",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://onyxtestcloud.com/ascensiaconnect/OAuth2/Authorize?client_id=&redirect_uri=&response_type=&scope=&language_code=&country_code=",
+					"protocol": "https",
+					"host": [
+						"onyxtestcloud",
+						"com"
+					],
+					"path": [
+						"ascensiaconnect",
+						"OAuth2",
+						"Authorize"
+					],
+					"query": [
+						{
+							"key": "client_id",
+							"value": ""
+						},
+						{
+							"key": "redirect_uri",
+							"value": ""
+						},
+						{
+							"key": "response_type",
+							"value": ""
+						},
+						{
+							"key": "scope",
+							"value": ""
+						},
+						{
+							"key": "language_code",
+							"value": ""
+						},
+						{
+							"key": "country_code",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Whisk Token",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	]
+}
